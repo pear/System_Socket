@@ -4,7 +4,7 @@
 * Simple unix socket connction
 * $Id$
 */
-require_once 'System/Socket/Creator.php';
+require_once 'System/Socket.php';
 
 /**
 * Create the unix domain socket with the specified parameters passed through
@@ -14,7 +14,7 @@ require_once 'System/Socket/Creator.php';
 * Note that unix domain sockets are not available on Win32.
 * 
 */
-$sock = &System_Socket_Creator::createConnection(
+$sock = &System_Socket::createConnection(
     array(  'proto'     => SOL_SOCKET,
             'domain'    => AF_UNIX,
             'type'      => SOCK_STREAM,
@@ -25,7 +25,7 @@ $sock = &System_Socket_Creator::createConnection(
 /**
 * Alternatively:
 * <code>
-*   $sock = &System_Socket_Creator::createUnixConnection('/tmp/pear.sock');
+*   $sock = &System_Socket::createUnixConnection('/tmp/pear.sock');
 * </code>
 */
 

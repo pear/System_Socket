@@ -5,14 +5,14 @@
 * $Id$
 */
 
-require_once 'System/Socket/Creator.php';
+require_once 'System/Socket.php';
 
 /**
 * Create a new TCP/IP System_Socket_Listener object.
 * 
 * Note that access rights only apply to AF_INET connections.
 */
-$srv = &System_Socket_Creator::createListener('localhost', 9876);
+$srv = &System_Socket::createListener('localhost', 9876);
 
 /**
 * Accept connections from localhost only

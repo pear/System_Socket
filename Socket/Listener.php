@@ -36,8 +36,8 @@ require_once SYSTEM_SOCKET_ROOT . '/Socket/Connection.php';
 * 
 * Example:
 * <code>
-*   require_once 'System/Socket/Creator.php';
-*   $Listener = &System_Socket_Creator::createListener(array(
+*   require_once 'System/Socket.php';
+*   $Listener = &System_Socket::createListener(array(
 *       'address'   => '/tmp/pear.sock',
 *       'domain'    => AF_UNIX,
 *       'proto'     => SOL_SOCKET,

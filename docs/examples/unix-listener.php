@@ -5,7 +5,7 @@
 * $Id$
 */
 
-require_once 'System/Socket/Creator.php';
+require_once 'System/Socket.php';
 
 PEAR::setErrorHandling(PEAR_ERROR_DIE, "Fatal PEAR Error: %s\n");
 
@@ -27,7 +27,7 @@ $sock = &System_Socket_Creator::createListener(
 /**
 * Alternatively:
 * <code>
-*   $sock = &System_Socket_Creator::createUnixListener('/tmp/pear.sock');
+*   $sock = &System_Socket::createUnixListener('/tmp/pear.sock');
 * </code>
 */
 

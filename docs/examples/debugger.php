@@ -5,7 +5,7 @@
 * $Id$
 */
 
-require_once 'System/Socket/Creator.php';
+require_once 'System/Socket.php';
 require_once 'System/Socket/Debugger.php';
 
 /**
@@ -23,7 +23,7 @@ define('SYSTEM_SOCKET_DEBUG', SYSTEM_SOCKET_DEBUG_ECHO);
 * 
 * Note that our debugger will be automatically attached!
 */
-$conn = &System_Socket_Creator::createTcpConnection('pear.php.net', 80);
+$conn = &System_Socket::createTcpConnection('pear.php.net', 80);
 
 // just check if we actually got a System_Socket_Connection returned
 if (PEAR::isError($conn)) {

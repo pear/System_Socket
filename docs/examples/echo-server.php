@@ -5,7 +5,7 @@
 * $Id$
 */
 
-require_once 'System/Socket/Creator.php';
+require_once 'System/Socket.php';
 
 set_time_limit(0);
 
@@ -14,7 +14,7 @@ set_time_limit(0);
 * through to the underlying System_Socket.  Used options are typical for
 * a TCP/IP listener.
 */
-$srv = &System_Socket_Creator::createListener(
+$srv = &System_Socket::createListener(
     array(  'port'      => 9876,
             'proto'     => SOL_TCP,
             'domain'    => AF_INET,

@@ -204,8 +204,8 @@ class System_Socket_ConnectionPool
         $params = array_splice(func_get_args(), 1);
         $result = array();
         foreach (array_keys($this->pool) as $ID){
-            $result[$ID] = call_user_method_array(
-                $method, $this->pool[$ID], $params);
+            $result[$ID] = call_user_func_array(
+                array(&$this->pool[$ID], $method), $params);
         }
         return $result;
     }

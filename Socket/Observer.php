@@ -78,17 +78,6 @@ class System_Socket_Observer
     }
 
     /**
-    * ZE2 copy
-    * @ignore
-    */
-    function __clone()
-    {
-        $new = $this;
-        $new->_generateHashCode();
-        return $new;
-    }
-    
-    /**
     * Notify
     * 
     * @abstract
