@@ -39,9 +39,11 @@ require_once 'PEAR.php';
 * 
 * Example: Simple HTTP request to localhost
 * <code>
-*   require_once 'System/Socket.php';
+*   require_once 'System/Socket/Creator.php';
 * 
-*   $conn = &System_Socket::createConnection(array('address' => '127.0.0.1'));
+*   $conn = &System_Socket_Creator::createConnection(
+*       array('address' => '127.0.0.1')
+*   );
 *   if (PEAR::isError($conn)) {
 *       die($conn->getMessage());
 *   }
