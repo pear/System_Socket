@@ -36,8 +36,8 @@ require_once SYSTEM_SOCKET_ROOT . '/Socket/Connection.php';
 * 
 * Example:
 * <code>
-*   require_once 'System/Socket.php';
-*   $Listener = &System_Socket::createListener(array(
+*   require_once 'System/Socket/Creator.php';
+*   $Listener = &System_Socket_Creator::createListener(array(
 *       'address'   => '/tmp/pear.sock',
 *       'domain'    => AF_UNIX,
 *       'proto'     => SOL_SOCKET,
@@ -357,10 +357,6 @@ class System_Socket_Listener extends System_Socket_Manager
         if (!@include_once 'Net/IPv4.php') {
             return $this->raiseError(
                 'Net_IPv4 is needed to provide this functionality');
-        }
-        // !yuk
-        if (!isset($GLOBALS['Net_IPv4_Netmask_Map'])) {
-            $GLOBALS['Net_IPv4_Netmask_Map'] = $Net_IPv4_Netmask_Map;
         }
         if (!strstr($mask, '/')) {
             $mask .= '/32';
