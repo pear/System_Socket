@@ -16,7 +16,7 @@ PEAR::setErrorHandling(PEAR_ERROR_DIE, "Fatal PEAR Error: %s\n");
 * 
 * Note that unix domain sockets are not available on Win32.
 */
-$sock = &System_Socket_Creator::createListener(
+$sock = &System_Socket::createListener(
     array(  'proto'     => SOL_SOCKET,
             'domain'    => AF_UNIX,
             'type'      => SOCK_STREAM,
