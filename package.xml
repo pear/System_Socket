@@ -17,7 +17,7 @@ Aims to provide a thight and robust OO API to PHPs socket extension (ext/sockets
   <release>
     <version>0.4.1</version>
     <state>alpha</state>
-    <date>2004-04-26</date>
+    <date>2004-05-03</date>
     <notes>
 * Removed Net_IPv4 workaround (bug #1225)
 * Updated optional dependency to Net_IPv4-1.2
