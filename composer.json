@@ -1,0 +1,25 @@
+{
+    "authors": [
+        {
+            "email": "mike@php.net",
+            "name": "Michael Wallner",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "description": "More info available on: http://pear.php.net/package/System_Socket",
+    "license": "PHP",
+    "name": "pear/system_socket",
+    "support": {
+        "issues": "http:///bugs/search.php?cmd=display&package_name[]=System_Socket",
+        "source": "https://github.com/pear/System_Socket"
+    },
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
